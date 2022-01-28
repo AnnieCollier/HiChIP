@@ -1,22 +1,11 @@
 library(GENOVA)
 #load matrix and bed files from HiCPro
-WT_10kb <- load_contacts(signal_path = 'AHDC1_WT_10000.matrix', indices_path = 'AHDC1_WT_10000_abs.bed', sample_name = "WT", colour = "blue")
-KO_10kb <- load_contacts(signal_path = 'AHDC1_KO_10000.matrix', indices_path = 'AHDC1_KO_10000_abs.bed', sample_name = "KO", colour = "red")
-WT_25kb <- load_contacts(signal_path = 'AHDC1_WT_25000.matrix', indices_path = 'AHDC1_WT_25000_abs.bed', sample_name = "WT", colour = "blue")
-KO_25kb <- load_contacts(signal_path = 'AHDC1_KO_25000.matrix', indices_path = 'AHDC1_KO_25000_abs.bed', sample_name = "KO", colour = "red")
+sample_10kb <- load_contacts(signal_path = 'sample_10000.matrix', indices_path = 'sample_10000_abs.bed', sample_name = "sample", colour = "blue")
+sample_25kb <- load_contacts(signal_path = 'sample_25000.matrix', indices_path = 'sample_25000_abs.bed', sample_name = "sample", colour = "blue")
 
 #load other annotation files of interest
-CTCF_down = read.delim('~/Box/Ann_Collier/DiffBind/CTCF_down_hg38.bed', h = F)
-CTCF = read.delim('~/Box/Ann_Collier/DiffBind/CTCF_D7_hg38_0.05_IDR.txt.npk.bed', h = F)
-GATA3 = read.delim('~/Box/Ann_Collier/GATA3_10k_hg38_0.01.bed', h = F, comment.char = "#")
-WT_loops = read.delim('~/Box/Ann_Collier/HiChIP/NovaSeq/AHDC1_WT_10kb.interactions_FitHiC_Q0.01.bed', h= F)
-WT_only_loops = read.delim('~/Box/Ann_Collier/HiChIP/NovaSeq/WT_only_10KB_overlap_0.01.bed', h= F)
-WT_unique_loops = read.delim('~/Box/Ann_Collier/HiChIP/NovaSeq/WT_unique_loops.bed', h= F)
-WT_loops_CTCF_down = read.delim('~/Box/Ann_Collier/HiChIP/AHDC1_MATRIX/WT_loops_CTCF_down.bed', h= F)
-WT_loops_GATA3 = read.delim('~/Box/Ann_Collier/HiChIP/AHDC1_MATRIX/WT_loops_GATA3.bed', h= F)
-WT_loops_AHDC1_down = read.delim('~/Box/Ann_Collier/HiChIP/AHDC1_MATRIX/WT_loops_AHDC1_down.bed', h= F)
-WT_loops_AHDC1_up = read.delim('~/Box/Ann_Collier/HiChIP/AHDC1_MATRIX/WT_loops_AHDC1_up.bed', h= F)
-WT_loops_non_AHDC1 = read.delim('~/Box/Ann_Collier/HiChIP/AHDC1_MATRIX/non_AHDC1_target_genes.bed', h= F)
+chip_bed = read.delim('path/to/bed/CTCF_down_hg38.bed', h = F)
+loops = read.delim('path/to/loops/sample.interactions_FitHiC_Q0.01.bed', h= F)
 
 #plot a chromosome matrix
 #can overlay with a chip bed file if desired
