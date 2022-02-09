@@ -1,6 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=KO_r1 --output=KO_r1.out --error=KO_r1.err --time=10:00:00 --qos=normal --nodes=1 --mem-per-cpu=32G
 
+#Written by Sadhana Gaddam
+
 ml python
 ml py-scipy/1.1.0_py27
 ml biology
