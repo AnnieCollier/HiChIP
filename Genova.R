@@ -1,3 +1,5 @@
+#Adopted from GENOVA vignette by Annie Collier
+
 library(GENOVA)
 #load matrix and bed files from HiCPro
 sample_10kb <- load_contacts(signal_path = 'sample_10000.matrix', indices_path = 'sample_10000_abs.bed', sample_name = "sample", colour = "blue")
