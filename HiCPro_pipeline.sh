@@ -1,6 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=HiCPro --output=HiCPro.out --error=HiCPro.err --time=01:00:00 --qos=normal --nodes=1 --mem-per-cpu=4000 --ntasks-per-node=8    
 
+#Written by Sadhana Gaddam
+
 ml biology hic-pro
 ml samtools
 ml bowtie2
